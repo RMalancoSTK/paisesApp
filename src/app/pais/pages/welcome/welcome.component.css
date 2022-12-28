@@ -1,0 +1,5 @@
+#home {
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+}

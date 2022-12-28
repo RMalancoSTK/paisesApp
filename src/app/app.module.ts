@@ -7,7 +7,7 @@ import { PaisModule } from './pais/pais.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, PaisModule],
   providers: [],
   bootstrap: [AppComponent],
 })

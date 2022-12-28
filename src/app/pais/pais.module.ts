@@ -2,10 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './pages/home/home.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [HomeComponent, DashboardComponent],
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   exports: [HomeComponent, DashboardComponent],
 })
 export class PaisModule {}
