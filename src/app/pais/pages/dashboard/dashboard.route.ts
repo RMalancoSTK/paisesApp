@@ -10,13 +10,6 @@ const dashboardRoute: Routes = [
       title: 'Dashboard',
     },
   },
-  {
-    path: 'porcapital',
-    loadChildren: () =>
-      import('../por-capital/por-capital.module').then(
-        (m) => m.PorCapitalModule
-      ),
-  },
 ];
 
 @NgModule({

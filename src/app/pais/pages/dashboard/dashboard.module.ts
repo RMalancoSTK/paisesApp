@@ -3,7 +3,6 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { DashboardRouteModule } from './dashboard.route';
 import { DashboardComponent } from './dashboard.component';
 import { PorCapitalModule } from 'src/app/pais/pages/por-capital/por-capital.module';
-import { PorCapitalComponent } from '../por-capital/por-capital.component';
 
 @NgModule({
   imports: [DashboardRouteModule, PorCapitalModule],
