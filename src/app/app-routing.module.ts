@@ -32,6 +32,22 @@ const routes: Routes = [
         path: 'porregion',
         component: PorRegionComponent,
       },
+      {
+        path: 'verpais',
+        loadChildren: () =>
+          import('./pais/pages/ver-pais/ver-pais.module').then(
+            (m) => m.VerPaisModule
+          ),
+      },
+      {
+        path: '',
+        redirectTo: 'welcome',
+        pathMatch: 'full',
+      },
+      {
+        path: '**',
+        redirectTo: 'welcome',
+      },
     ],
   },
   {

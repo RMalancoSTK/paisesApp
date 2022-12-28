@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { MenuComponent } from './menu/menu.component';
-import { PaisModule } from '../pais/pais.module';
 import { FooterComponent } from './footer/footer.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [SidebarComponent, MenuComponent, FooterComponent],
   exports: [SidebarComponent, MenuComponent, FooterComponent],
-  imports: [CommonModule, PaisModule],
+  imports: [CommonModule, RouterModule],
 })
 export class SharedModule {}

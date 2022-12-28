@@ -1,16 +1,15 @@
 <!-- Inicio de sidebar -->
 <div class="bg-dark border-right p-3" id="sidebar">
-  <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+  <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
     <span class="fs-4">Busquedas</span>
   </a>
   <hr class="text-white">
-  <div class="list-group list-reset">
-    <a href="#" class="list-group-item list-group-item-action bg-light text-dark"><i class="bi bi-search">
-      </i> Por Capital</a>
-    <a href="#" class="list-group-item list-group-item-action bg-light text-dark"><i class="bi bi-search">
-      </i> Por Pais</a>
-    <a href="#" class="list-group-item list-group-item-action bg-light text-dark"><i class="bi bi-search">
-      </i> Por Region</a>
+  <div class="list-group">
+    <a class="list-group-item" routerLink="/dashboard/welcome" routerLinkActive="active">Bienvenido</a>
+    <a class="list-group-item" routerLink="/dashboard/porcapital" routerLinkActive="active">Por capital</a>
+    <a class="list-group-item" routerLink="/dashboard/porpais" routerLinkActive="active">Por pais</a>
+    <a class="list-group-item" routerLink="/dashboard/porregion" routerLinkActive="active">Por region</a>
+    <a class="list-group-item" routerLink="/dashboard/verpais" routerLinkActive="active">Ver pais</a>
   </div>
 </div>
 <!-- Fin de sidebar -->
