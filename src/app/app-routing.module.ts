@@ -1,25 +1,30 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './main/pages/home/home.component';
-import { DashboardComponent } from './main/pages/dashboard/dashboard.component';
 
 const routes: Routes = [
   {
-    path: '',
-    component: HomeComponent,
-    pathMatch: 'full',
-  },
-  {
     path: 'home',
-    component: HomeComponent,
+    loadChildren: () =>
+      import('./pais/pages/home/home.module').then((m) => m.HomeModule),
   },
   {
     path: 'dashboard',
-    component: DashboardComponent,
+    loadChildren: () =>
+      import('./pais/pages/dashboard/dashboard.module').then(
+        (m) => m.DashboardModule
+      ),
+  },
+  {
+    path: '',
+    loadChildren: () =>
+      import('./pais/pages/home/home.module').then((m) => m.HomeModule),
+    pathMatch: 'full',
   },
   {
     path: '**',
-    redirectTo: 'home',
+    loadChildren: () =>
+      import('./pais/pages/home/home.module').then((m) => m.HomeModule),
+    pathMatch: 'full',
   },
 ];
 
