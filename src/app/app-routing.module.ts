@@ -40,6 +40,13 @@ const routes: Routes = [
           ),
       },
       {
+        path: 'verpais/:id',
+        loadChildren: () =>
+          import('./pais/pages/ver-pais/ver-pais.module').then(
+            (m) => m.VerPaisModule
+          ),
+      },
+      {
         path: '',
         redirectTo: 'welcome',
         pathMatch: 'full',

@@ -7,3 +7,8 @@ body {
 .nav-link {
   cursor: pointer;
 }
+
+.small-flag {
+  width: 30px;
+  height: 20px;
+}

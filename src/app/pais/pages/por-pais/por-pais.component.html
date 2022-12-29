@@ -2,38 +2,15 @@
 <hr>
 <div class="row">
   <div class="col">
-    <form autocomplete="off" (ngSubmit)="buscar()">
-      <input type="text" name="termino" class="form-control" placeholder="Buscar Pais" [(ngModel)]="termino">
-    </form>
+    <app-pais-input (onEnter)="buscar($event)"></app-pais-input>
   </div>
 </div>
 <hr>
 <div *ngIf="hayError" class="alert alert-danger">
   <strong>Info!</strong> No hay resultados para: {{termino}}
 </div>
-<div class="row mt-3">
+<div class="row mt-3" *ngIf="paises.length > 0">
   <div class="col">
-    <table class="table table-hover">
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Bandera</th>
-          <th>Nombre</th>
-          <th>Poblacion</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody id="tbody" class="tbody">
-        <tr>
-          <td>1</td>
-          <td><img src="https://restcountries.eu/data/afg.svg" alt="" width="50px"></td>
-          <td>Afganistán</td>
-          <td>27657145</td>
-          <td>
-            <a href="/pais/afg">Ver mas</a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <app-pais-tabla [paises]="paises"></app-pais-tabla>
   </div>
 </div>
