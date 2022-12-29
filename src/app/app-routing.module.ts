@@ -6,11 +6,16 @@ import { PorCapitalComponent } from './pais/pages/por-capital/por-capital.compon
 import { WelcomeComponent } from './pais/pages/welcome/welcome.component';
 import { PorPaisComponent } from './pais/pages/por-pais/por-pais.component';
 import { PorRegionComponent } from './pais/pages/por-region/por-region.component';
+import { TestComponent } from './main/pages/test/test.component';
 
 const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
+  },
+  {
+    path: 'test',
+    component: TestComponent,
   },
   {
     path: 'dashboard',
