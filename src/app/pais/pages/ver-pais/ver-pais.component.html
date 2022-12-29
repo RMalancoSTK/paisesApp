@@ -1,7 +1,49 @@
-<h3>Ver Pais</h3>
-<hr>
-<div class="row">
-  <div class="col">
+<div class="alert alert-danger" *ngIf="!pais else mostrarPais">
+  <p>País no encontrado</p>
+</div>
+
+<ng-template #mostrarPais>
+  <div class="row">
+    <div class="col-12">
+      <h1>País: <small>{{pais.name.common}}</small></h1>
+    </div>
+
+    <div class="col-4">
+      <h3>Bandera</h3>
+      <img [src]="pais.flags.png" [alt]="pais.name.common" class="img-thumbnail">
+    </div>
+
+    <div class="col-8">
+      <h3>Información</h3>
+      <ul class="list-group">
+        <li class="list-group-item"><b>Capital: </b>{{pais.capital}}</li>
+        <li class="list-group-item"><b>Subregion / Subcontinente: </b>{{pais.subregion}}</li>
+        <li class="list-group-item"><b>Region / Continente: </b>{{pais.region}}</li>
+        <li class="list-group-item"><b>Area Territorial: </b>{{pais.area | number }} (km²)</li>
+        <li class="list-group-item"><b>Población: </b>{{pais.population | number }} (habitantes)</li>
+      </ul>
+    </div>
+
+    <div class="col-12">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Tipo Dato</th>
+            <th>Descripción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Idioma</td>
+            <td>{{idioma}}</td>
+          </tr>
+          <tr>
+            <td>Moneda</td>
+            <td>{{moneda}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
   </div>
-</div>
+</ng-template>

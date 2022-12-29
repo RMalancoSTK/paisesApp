@@ -51,7 +51,7 @@ export interface CoatOfArms {
 }
 
 export interface Currencies {
-  MXN: Mxn;
+  name: string;
 }
 
 export interface Mxn {
