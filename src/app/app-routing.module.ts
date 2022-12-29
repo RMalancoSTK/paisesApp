@@ -1,21 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './pais/pages/dashboard/dashboard.component';
-import { HomeComponent } from './pais/pages/home/home.component';
+import { HomeComponent } from './main/pages/home/home.component';
 import { PorCapitalComponent } from './pais/pages/por-capital/por-capital.component';
 import { WelcomeComponent } from './pais/pages/welcome/welcome.component';
 import { PorPaisComponent } from './pais/pages/por-pais/por-pais.component';
 import { PorRegionComponent } from './pais/pages/por-region/por-region.component';
-import { TestComponent } from './main/pages/test/test.component';
 
 const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
-  },
-  {
-    path: 'test',
-    component: TestComponent,
   },
   {
     path: 'dashboard',
