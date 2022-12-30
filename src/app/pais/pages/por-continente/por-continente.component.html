@@ -1,14 +1,13 @@
 <div class="animate__animated animate__fadeIn animate__faster">
-  <h3>Buscar por región <small> {{regionActiva | titlecase}} </small></h3>
-  <!-- siRegionEsIgualaRegionTitulo(region) -->
+  <h3>Buscar por Continente: <small> {{regionActiva | titlecase}} </small></h3>
   <hr>
   <h5>Seleccione una región</h5>
   <div class="row mt-3">
     <div class="col-12">
       <!-- <button class="btn btn-outline-primary me-1" *ngFor="let region of regiones" (click)="activarRegion(region)"
-        [class.active]="regionActiva === region">{{region}}</button> -->
-      <button *ngFor="let region of regiones" [class]="getClassCSS(region)"
-        (click)="activarRegion(region)">{{region}}</button>
+      [class.active]="regionActiva === region">{{region}}</button> -->
+      <button *ngFor="let region of regiones" [class]="getClassCSS(region)" (click)="activarRegion(region)">{{region |
+        titlecase}}</button>
     </div>
     <div *ngIf="hayError" class="alert alert-danger">
       <strong>Info!</strong> No hay resultados para: {{termino}}

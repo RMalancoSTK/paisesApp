@@ -7,6 +7,7 @@ import {
   Name,
   Languages,
   Currencies,
+  Translation,
 } from '../../interfaces/pais.interface';
 
 @Component({
@@ -18,6 +19,7 @@ export class VerPaisComponent implements OnInit {
   pais!: Country;
   lenguages: Languages[] = [];
   currencies: Currencies[] = [];
+  translations!: { [key: string]: Translation };
   idioma!: string;
   moneda!: string;
 
@@ -36,6 +38,7 @@ export class VerPaisComponent implements OnInit {
         this.pais = pais[0];
         this.lenguages = Object.values(this.pais.languages);
         this.currencies = Object.values(this.pais.currencies);
+        this.translations = this.pais.translations;
         this.idioma = this.lenguages[0].toString();
         this.moneda = this.currencies[0].name;
       });

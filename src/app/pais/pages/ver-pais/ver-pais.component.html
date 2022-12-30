@@ -1,49 +1,87 @@
-<div class="alert alert-danger" *ngIf="!pais else mostrarPais">
-  <p>País no encontrado</p>
-</div>
-
-<ng-template #mostrarPais>
-  <div class="row">
-    <div class="col-12">
-      <h1>País: <small>{{pais.name.common}}</small></h1>
-    </div>
-
-    <div class="col-4">
-      <h3>Bandera</h3>
-      <img [src]="pais.flags.png" [alt]="pais.name.common" class="img-thumbnail">
-    </div>
-
-    <div class="col-8">
-      <h3>Información</h3>
-      <ul class="list-group">
-        <li class="list-group-item"><b>Capital: </b>{{pais.capital}}</li>
-        <li class="list-group-item"><b>Subregion / Subcontinente: </b>{{pais.subregion}}</li>
-        <li class="list-group-item"><b>Region / Continente: </b>{{pais.region}}</li>
-        <li class="list-group-item"><b>Area Territorial: </b>{{pais.area | number }} (km²)</li>
-        <li class="list-group-item"><b>Población: </b>{{pais.population | number }} (habitantes)</li>
-      </ul>
-    </div>
-
-    <div class="col-12">
-      <table class="table table-hover">
-        <thead>
-          <tr>
-            <th>Tipo Dato</th>
-            <th>Descripción</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Idioma</td>
-            <td>{{idioma}}</td>
-          </tr>
-          <tr>
-            <td>Moneda</td>
-            <td>{{moneda}}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
+<div class="animate__animated animate__fadeIn animate__faster">
+  <div class="alert alert-danger" *ngIf="!pais else mostrarPais">
+    <p>País no encontrado</p>
   </div>
-</ng-template>
+
+  <ng-template #mostrarPais>
+    <div class="row">
+      <div class="col-12">
+        <h1>País: <small>{{pais.name.common}}</small></h1>
+      </div>
+
+      <div class="col-4">
+        <h3>Bandera</h3>
+        <img [src]="pais.flags.png" [alt]="pais.name.common" class="img-thumbnail">
+      </div>
+
+      <div class="col-8">
+        <h3>Información</h3>
+        <ul class="list-group">
+          <li class="list-group-item"><b>Capital: </b>{{pais.capital}}</li>
+          <li class="list-group-item"><b>Subregion / Subcontinente: </b>{{pais.subregion}}</li>
+          <li class="list-group-item"><b>Region / Continente: </b>{{pais.region}}</li>
+          <li class="list-group-item"><b>Area Territorial: </b>{{pais.area | number }} (km²)</li>
+          <li class="list-group-item"><b>Población: </b>{{pais.population | number }} (habitantes)</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Traducciones</h3>
+        <div class="row">
+          <div class="col">
+            <span class="badge bg-primary me-1 ">{{pais.translations['ara'].common}}</span>
+            <span class="badge bg-primary me-1 ">{{pais.translations['bre'].common}}</span>
+            <span class="badge bg-primary me-1 ">{{pais.translations['ces'].common}}</span>
+            <span class="badge bg-primary me-1 ">{{pais.translations['cym'].common}}</span>
+            <span class="badge bg-primary me-1 ">{{pais.translations['deu'].common}}</span>
+            <span class="badge bg-primary me-1 ">{{pais.translations['est'].common}}</span>
+            <span class="badge bg-primary me-1 ">{{pais.translations['fin'].common}}</span>
+            <span class="badge bg-primary me-1 ">{{pais.translations['fra'].common}}</span>
+            <span class="badge bg-primary me-1 ">{{pais.translations['hrv'].common}}</span>
+            <span class="badge bg-primary me-1 ">{{pais.translations['hun'].common}}</span>
+            <span class="badge bg-primary me-1 ">{{pais.translations['ita'].common}}</span>
+            <span class="badge bg-primary me-1 ">{{pais.translations['jpn'].common}}</span>
+            <span class="badge bg-primary me-1 ">{{pais.translations['kor'].common}}</span>
+            <span class="badge bg-primary me-1 ">{{pais.translations['nld'].common}}</span>
+            <span class="badge bg-primary me-1 ">{{pais.translations['per'].common}}</span>
+            <span class="badge bg-primary me-1 ">{{pais.translations['pol'].common}}</span>
+            <span class="badge bg-primary me-1 ">{{pais.translations['por'].common}}</span>
+            <span class="badge bg-primary me-1 ">{{pais.translations['rus'].common}}</span>
+            <span class="badge bg-primary me-1 ">{{pais.translations['slk'].common}}</span>
+            <span class="badge bg-primary me-1 ">{{pais.translations['spa'].common}}</span>
+            <span class="badge bg-primary me-1 ">{{pais.translations['swe'].common}}</span>
+            <span class="badge bg-primary me-1 ">{{pais.translations['tur'].common}}</span>
+            <span class="badge bg-primary me-1 ">{{pais.translations['urd'].common}}</span>
+            <span class="badge bg-primary me-1 ">{{pais.translations['zho'].common}}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Tipo Dato</th>
+              <th>Descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Idioma</td>
+              <td>{{idioma}}</td>
+            </tr>
+            <tr>
+              <td>Moneda</td>
+              <td>{{moneda}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- <pre class="col-12">
+      {{pais | json}}
+    </pre> -->
+
+    </div>
+  </ng-template>
+</div>

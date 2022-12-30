@@ -9,10 +9,10 @@
     </tr>
   </thead>
   <tbody id="tbody" class="tbody">
-    <tr *ngFor="let resultado of resultados; let i = index">
+    <tr *ngFor="let resultado of resultados; let i = index" class="animate__animated animate__fadeIn animate__faster">
       <td>{{i+1}}</td>
       <td><img class="small-flag" [src]="resultado.flags.svg" alt=""></td>
-      <td>{{resultado.name.common}},{{resultado.capital}}</td>
+      <td>{{resultado.name.common || resultado.name}}</td>
       <td>{{resultado.population | number}}</td>
       <td>
         <a [routerLink]="['/dashboard/verpais', resultado.altSpellings[0]]" class="btn btn-outline-primary btn-sm">
