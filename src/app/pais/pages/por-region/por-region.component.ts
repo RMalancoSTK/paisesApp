@@ -28,6 +28,7 @@ export class PorRegionComponent {
   hayError: boolean = false;
   paises: Country[] = [];
   title: string = '';
+  tipoBusqueda: string = 'pais';
 
   regionesTitulo: string[] = [
     'European Union',

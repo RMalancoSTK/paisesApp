@@ -1,0 +1,15 @@
+<ul *ngIf="mostrarSugerencias && paisesSugeridos.length > 0" class="list-group">
+  <li class="list-group-item list-group-item-action">
+    <a class="nav-link" (click)="buscarSugerido(termino)">Buscar: {{termino}}</a>
+  </li>
+  <div *ngIf="tipoBusqueda === 'pais' else porcapital">
+    <li *ngFor="let pais of paisesSugeridos" class="list-group-item list-group-item-action">
+      <a class="nav-link" routerLink="/dashboard/verpais/{{pais.altSpellings[0]}}">{{pais.name.common}}</a>
+    </li>
+  </div>
+  <ng-template #porcapital>
+    <li *ngFor="let pais of paisesSugeridos" class="list-group-item list-group-item-action">
+      <a class="nav-link" routerLink="/dashboard/verpais/{{pais.altSpellings[0]}}">{{pais.capital}}</a>
+    </li>
+  </ng-template>
+</ul>

@@ -7,6 +7,12 @@
         placeholder="Buscar Capital"></app-pais-input>
     </div>
   </div>
+  <div class="row">
+    <div class="col">
+      <app-pais-ul [mostrarSugerencias]="mostrarSugerencias" [paisesSugeridos]="paisesSugeridos"
+        (onSugerido)="buscarSugerido($event)" [termino]="termino"></app-pais-ul>
+    </div>
+  </div>
   <hr>
   <div *ngIf="hayError" class="alert alert-danger">
     <strong>Info!</strong> No hay resultados para: {{termino}}

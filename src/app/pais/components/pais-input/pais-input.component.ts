@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { debounceTime, Subject } from 'rxjs';
+import { Country } from '../../interfaces/pais.interface';
 
 @Component({
   selector: 'app-pais-input',

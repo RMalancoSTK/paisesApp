@@ -8,6 +8,7 @@ import { Country } from '../../interfaces/pais.interface';
 })
 export class PaisTablaComponent {
   @Input() resultados: Country[] = [];
+  @Input() tipoBusqueda: string = '';
 
   constructor() {}
 }

@@ -13,6 +13,7 @@ export class PorContinenteComponent {
   termino: string = '';
   hayError: boolean = false;
   paises: Country[] = [];
+  tipoBusqueda: string = 'pais';
 
   constructor(private paisService: PaisService) {}
 

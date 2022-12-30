@@ -7,13 +7,19 @@
         placeholder="Buscar País"></app-pais-input>
     </div>
   </div>
+  <div class="row">
+    <div class="col">
+      <app-pais-ul [mostrarSugerencias]="mostrarSugerencias" [paisesSugeridos]="paisesSugeridos"
+        (onSugerido)="buscarSugerido($event)" [termino]="termino" [tipoBusqueda]="tipoBusqueda"></app-pais-ul>
+    </div>
+  </div>
   <hr>
   <div *ngIf="hayError" class="alert alert-danger">
     <strong>Info!</strong> No hay resultados para: {{termino}}
   </div>
   <div class="row mt-3" *ngIf="paises.length > 0">
     <div class="col">
-      <app-pais-tabla [resultados]="paises"></app-pais-tabla>
+      <app-pais-tabla [resultados]="paises" [tipoBusqueda]="tipoBusqueda"></app-pais-tabla>
     </div>
   </div>
 </div>

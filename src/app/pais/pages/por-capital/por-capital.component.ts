@@ -29,7 +29,25 @@ export class PorCapitalComponent {
     );
   }
 
+  paisesSugeridos: Country[] = [];
+  mostrarSugerencias: boolean = false;
+
   sugerencias(termino: string) {
     this.hayError = false;
+    this.termino = termino;
+    this.mostrarSugerencias = true;
+    this.paisService.buscarCapital(termino).subscribe(
+      (paises) => {
+        this.paisesSugeridos = paises.splice(0, 5);
+      },
+      (err) => {
+        console.info(`Error Sugerencia: ${err}`);
+        this.paisesSugeridos = [];
+      }
+    );
+  }
+
+  buscarSugerido(termino: string) {
+    this.buscar(termino);
   }
 }

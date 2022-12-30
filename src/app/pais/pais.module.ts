@@ -10,6 +10,7 @@ import { PaisInputComponent } from './components/pais-input/pais-input.component
 import { PorCapitalComponent } from './pages/por-capital/por-capital.component';
 import { PorRegionComponent } from './pages/por-region/por-region.component';
 import { PorContinenteComponent } from './pages/por-continente/por-continente.component';
+import { PaisUlComponent } from './components/pais-ul/pais-ul.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { PorContinenteComponent } from './pages/por-continente/por-continente.co
     PorCapitalComponent,
     PorRegionComponent,
     PorContinenteComponent,
+    PaisUlComponent,
   ],
   imports: [CommonModule, RouterModule, SharedModule, FormsModule],
   exports: [DashboardComponent, PorPaisComponent],
